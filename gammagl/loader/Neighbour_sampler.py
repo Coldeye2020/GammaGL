@@ -1,4 +1,4 @@
-from gammagl.sample import sample_subset
+# from gammagl.sample import sample_subset
 import numpy as np
 
 
