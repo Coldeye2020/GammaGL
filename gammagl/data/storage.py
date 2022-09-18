@@ -9,7 +9,7 @@ from typing import (Any, Callable, Dict, Iterable, List, NamedTuple, Optional,
 import numpy as np
 import tensorlayerx as tlx
 from gammagl.data.view import ItemsView, KeysView, ValuesView
-from gammagl.utils import is_undirected, coalesce
+from gammagl.utils import is_undirected, colesce
 
 # Node-types are denoted by a single string, e.g.: `data['paper']`:
 NodeType = str

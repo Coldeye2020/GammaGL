@@ -1,7 +1,6 @@
 import tensorlayerx as tlx
 from gammagl.layers.conv import RGCNConv
 
-
 class RGCN(tlx.nn.Module):
     """relational graph convoluation nerworks"""
     def __init__(self, feature_dim, hidden_dim, num_class, num_relations, name=None):

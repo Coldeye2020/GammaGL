@@ -15,6 +15,7 @@ from .simplehgn_conv import SimpleHGNConv
 from .fagcn_conv import FAGCNConv
 from .gpr_conv import GPRConv
 from .gin_conv import GINConv
+from .hardgat_conv import HardGAO
 
 __all__ = [
     'MessagePassing',

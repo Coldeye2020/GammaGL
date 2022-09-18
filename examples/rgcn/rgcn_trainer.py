@@ -19,6 +19,7 @@ import os.path as osp
 import numpy as np
 
 
+
 class SemiSpvzLoss(WithLoss):
     def __init__(self, net, loss_fn):
         super(SemiSpvzLoss, self).__init__(backbone=net, loss_fn=loss_fn)

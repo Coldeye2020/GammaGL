@@ -116,4 +116,3 @@ class GATConv(MessagePassing):
         if self.add_bias:
             x += self.bias
         return x
-
