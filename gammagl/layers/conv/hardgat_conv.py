@@ -79,8 +79,8 @@ class HardGAO(MessagePassing):
         rowptr = np.concatenate(([0], np.bincount(dst).cumsum()))
         for dst_node in np.unique(dst):
             st = rowptr[dst_node]
-            len = rowptr[dst_node + 1] - st
-            for i in range(st, min(st + k, st + len)):
+            len1 = rowptr[dst_node + 1] - st
+            for i in range(st, min(st + k, st + len1)):
                 e_id.append(i)
         
         return tlx.convert_to_tensor([src[e_id], dst[e_id]])
