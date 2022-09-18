@@ -1,5 +1,6 @@
 import tensorlayerx as tlx
 from gammagl.layers.conv import HardGAO
+from functools import partial
 
 
 class HardGATModel(tlx.nn.Module):
@@ -13,12 +14,13 @@ class HardGATModel(tlx.nn.Module):
                  feat_drop,
                  attn_drop,
                  negative_slope,
-                 residual):
+                 residual,
+                 k):
         super(HardGATModel, self).__init__()
         self.num_layers = num_layers
         self.gat_layers = tlx.nn.ModuleList()
         self.activation = activation
-        gat_layer = HardGAO
+        gat_layer = partial(HardGAO, k=k)
         muls = heads
         # input projection (no residual)
         self.gat_layers.append(gat_layer(

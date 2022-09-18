@@ -34,6 +34,7 @@ __all__ = [
     'SimpleHGNConv',
     'FAGCNConv',
     'GPRConv',
+    'HardGAO'
 ]
 
 classes = __all__

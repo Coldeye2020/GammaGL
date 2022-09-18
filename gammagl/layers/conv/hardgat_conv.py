@@ -18,10 +18,10 @@ class HardGAO(MessagePassing):
                 in_channels,
                 out_channels,
                 heads=1,
-                negative_slope=0.2,
-                residual=True,
                 feat_drop=0,
                 attn_drop=0,
+                negative_slope=0.2,
+                residual=True,
                 activation=tlx.elu,
                 k=8,
                 concat=False):
